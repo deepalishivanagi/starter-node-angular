@@ -1,0 +1,28 @@
+Day 1
+Create new Link companies. When user clicks on it, show new template companies.html
+In companies.html, show boxes  with company names
+1. Microsoft
+2. Accenture
+3. Amazon
+4. TCS
+5. Infosys
+6. LnT
+7. Capgemini
+8. Wipro
+9. IBM
+10. Qualcomm
+
+Use html cards for creating company cards
+
+
+Day 2:
+Create Navigation bar. Add Company button there.
+Add footer to the website. https://bootsnipp.com/tags/footer
+
+Create home page: sliding images/ some catchy tags.
+
+Day 3:
+Connect mongo db to project. Add for in company tab to apply.
+Create form and submit form to monog db.
+
+
