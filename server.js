@@ -4,6 +4,7 @@ var app            = express();
 var mongoose       = require('mongoose');
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
+var MongoClient    = require('mongodb').MongoClient;
 
 // configuration ===========================================
 	
@@ -22,10 +23,11 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 app.use(express.static(__dirname + '/public2')); // set the static files location /public/img will be /img for users
 app.use(express.static(__dirname + '/public'))
 // routes ==================================================
-require('./app/routes')(app); // pass our application into our routes
+require('./app/routes')(app, MongoClient, db.url); // pass our application into our routes
 
 // start app ===============================================
 app.listen(port);	
+
 console.log('Magic happens on port ' + port); 			// shoutout to the user
 console.log(__dirname);
 exports = module.exports = app; 						// expose app

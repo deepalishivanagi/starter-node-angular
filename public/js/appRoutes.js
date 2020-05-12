@@ -1,12 +1,18 @@
 angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 	$routeProvider
-
+        // .when('/', {
+		// templateUrl: 'views/login.html',
+		// controller: 'LoginController'
+	    //  })
 		// home page
-		.when('/', {
+		
+		.when('/loggedin', {
 			templateUrl: 'views/home.html',
 			controller: 'MainController'
+	
 		})
+
 
 		.when('/company', {
 			templateUrl: 'views/company.html',
@@ -23,7 +29,13 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		.when('/hacker', {
 			templateUrl: 'views/hacker.html',
 			controller: 'HackerController'
+		})
+
+		.when('/', {
+			templateUrl: 'views/home.html',
+			controller: 'MainController'
 		});
+
 
 
 	$locationProvider.html5Mode(true);

@@ -24,5 +24,11 @@ Create home page: sliding images/ some catchy tags.
 Day 3:
 Connect mongo db to project. Add for in company tab to apply.
 Create form and submit form to monog db.
+./mongod -> to run mongodb
+./mongo -> To run the mongo shell
+show dbs
+use db
+db.createCollection
+db.table.insert()
 
-
+background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
