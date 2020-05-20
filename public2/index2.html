@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<base href="/Test">
+			<link rel="stylesheet" href="./loginstyle.css">	
+
+
+			<!-- JS -->
+				<script src="../libs/angular/angular.min.js"></script>
+				<script src="../libs/angular-route/angular-route.min.js"></script>
+
+						<!-- ANGULAR CUSTOM -->
+				<script src="js/controllers/loginCtrl.js"></script>
+				<script src="js/controllers/signupCtrl.js"></script>
+				<script src="js/services/loginService.js"></script>
+				<script src="js/services/signupService.js"></script>
+				<script src="js/S2appRoutes.js"></script>
+				<script src="js/S2app.js"></script>
+	</head>
+
+		<body ng-app="sampleApp2" >
+		<div class="body"></div>
+		<div class="container">
+			<div class="headindex">	
+			<button><a href="login">Login</a></button>
+			<button><a href="signup">Signup</a></button>
+		</div>
+
+        <!-- ANGULAR DYNAMIC CONTENT -->
+		<div ng-view></div>
+	</div>
+</body>
+
+    </html>

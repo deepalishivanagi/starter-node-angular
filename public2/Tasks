@@ -28,7 +28,23 @@ Create form and submit form to monog db.
 ./mongo -> To run the mongo shell
 show dbs
 use db
+show collections
 db.createCollection
 db.table.insert()
+db.table.find()
 
 background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+
+callback concept for mongodb Connect
+
+Profile 
+Create a form.
+when user submits the form, add it in new collection.
+Collection Name: UserProfile
+
+name:
+age:
+SchoolName:
+Skills:a,b,c,
+
+

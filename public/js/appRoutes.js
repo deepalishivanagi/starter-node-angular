@@ -12,6 +12,12 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'MainController'
 	
 		})
+		.when('/signnedup', {
+			templateUrl: 'views/home.html',
+			controller: 'MainController'
+	
+		})
+
 
 
 		.when('/company', {
@@ -19,16 +25,20 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			//controller: 'CompanyController'
 		})
 
-		.when('/nerd', {
-			templateUrl: 'views/company.html',
-			controller: 'CompanyController'
-		})
+		// .when('/nerd', {
+		// 	templateUrl: 'views/company.html',
+		// 	controller: 'CompanyController'
+		// })
 
 		
 
 		.when('/hacker', {
 			templateUrl: 'views/hacker.html',
 			controller: 'HackerController'
+		})
+		.when('/profile',{
+			templateUrl: 'views/profile.html',
+			controller: 'ProfileController'
 		})
 
 		.when('/', {

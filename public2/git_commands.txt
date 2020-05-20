@@ -1,3 +1,13 @@
+1.go to ur project location 
+2.right click and open the git bash
+3.then look the position where it is present
+4.you can move the pointer wherever you want by typing cd (filename where you want to go)
+5.eg-cd public
+6.to come one step outside cd ..
+7.comes to starter project
+8.to move use cd file ,to outside cd..
+9.cd public/index.html/.. =public
+
 git status
 
 git diff

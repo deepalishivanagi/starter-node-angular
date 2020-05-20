@@ -10,7 +10,7 @@ module.exports = function(app, MongoClient, url) {
 	var str = "";
 
 	 app.get('/loggedin', function(req, res) {
-		 console.log(req.query);
+		console.log(req.query);
 		console.log(url);
 		MongoClient.connect(url, async function(err, databaseSet) {
 			console.log("connected to url" + url);
@@ -49,8 +49,57 @@ module.exports = function(app, MongoClient, url) {
 	 	//res.sendfile('./public2/error.html');
 	});
 
-	app.get('*', function(req, res) {
-		res.sendfile('./public2/index.html');
-	});
 
-};
+
+
+	// signup part
+
+	app.get('/signnedup', function(req, res)
+	{
+		
+		console.log(req.query);
+		console.log(url);
+
+		MongoClient.connect(url, async function(err, databaseSet) {
+			console.log("connected to url" + url);
+			db = databaseSet.db("FirstDb");
+			console.log("db ys");
+			if(!err)
+			{
+				var myobj = {"username":req.query.user,"password":req.query.password};
+				var cursor = db.collection('Login').insertOne(myobj, function(err, result){
+					if(!err)
+					{
+						console.log("1 doc inserted");
+						res.sendfile('./public2/index2.html')
+						
+						return;
+						// console.log("1 doc inserted");
+							
+					}
+					else{
+					console.log(err);
+					}  
+				    
+                });
+	 	//res.sendfile('./public2/error.html');
+	        }
+			else{
+				console.log(err);
+			}
+			databaseSet.close();
+		});
+});
+
+app.get("", function(req, res) {	
+	console.log("coming to *");
+	res.sendfile('./public2/index2.html');
+	console.log("sent ./public2/index.html ")
+});
+
+app.get("*", function(req, res) {	
+		console.log("coming to *");
+		res.sendfile('./public2/index2.html');
+		console.log("sent ./public2/index.html ")
+	});
+}
