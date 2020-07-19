@@ -1,3 +1,3 @@
 module.exports = {
-	url : 'mongodb://127.0.0.1:27017'
+	url : 'mongodb://manjumongoaccount:in1DyDWhylaV64i08wAVXkSyayBmV95PjNdmKmJJ0E5sz9Pv2eIk2KK8OD6TDwwYxB9gnssZEcNHVjnEfKsSgw==@manjumongoaccount.mongo.cosmos.azure.com:10255/?ssl=true&appName=@manjumongoaccount@'
 }
