@@ -12,7 +12,7 @@ git status
 
 git diff
 
-git add 
+git add (for adding files write git add .)
 
 git commit -m "Message"
 

@@ -12,11 +12,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'MainController'
 	
 		})
-		.when('/signnedup', {
-			templateUrl: 'views/home.html',
-			controller: 'MainController'
+		// .when('/signnedup', {
+		// 	templateUrl: 'views/home.html',
+		// 	controller: 'MainController'
 	
-		})
+		// })
 
 
 
@@ -46,8 +46,13 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'MainController'
 		});
 
+	
+
 
 
 	$locationProvider.html5Mode(true);
 
 }]);
+
+
+

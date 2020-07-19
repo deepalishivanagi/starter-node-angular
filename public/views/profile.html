@@ -1,18 +1,18 @@
 <div class="jumbotron text-center">
 <html>
-<body>
+<body>{{ value }}
     
-    <h2>Responsive Form</h2>
+    <h2>Complete your profile</h2>
     <!-- <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p> -->
     
         <div class="containerone">
-        <form action="/action_page.php">
+        <form action="/Submitprof">
         <div class="row">
             <div class="col-25">
             <label for="fname">First Name</label>
             </div>
             <div class="col-75">
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <input type="text" id="fname" name="firstname" value = {{data.firstname}} placeholder="Your name..">
             </div>
         </div>
         <div class="row">
@@ -20,7 +20,7 @@
             <label for="lname">Last Name</label>
             </div>
             <div class="col-75">
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <input type="text" id="lname" name="lastname" value = {{data.lastname}} placeholder="Your last name..">
             </div>
         </div>
         <div class="row">
@@ -28,19 +28,19 @@
                <label for="gender">Gender</label>
             </div>
             
-                <input type="radio" id="male" name="gender" value="male">
+                <input type="radio" id="male" name="gender" value={{data.male}}>
                 <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
+                <input type="radio" id="female" name="gender" value={{data.female}}>
                 <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other">
+                <input type="radio" id="other" name="gender" value={{data.other}}>
                 <label for="other">Other</label><br>
         </div>
         <div class="row">
                 <div class="col-25">
-                    <label for="birthday">Birthday:</label>
+                    <label for="birthday">Birth Date:</label>
                 </div> 
                 <div class="col-75">   
-                    <input type="date" id="birthday" name="birthday">
+                    <input type="date" id="birthday" name="birthdate" value = {{data.birthdate}}>
                 </div>
         </div>
         <div class="row">
@@ -48,7 +48,7 @@
             <label for="country">Country</label>
             </div>
             <div class="col-75">
-            <select id="country" name="country">
+            <select id="country" name="country" value = {{data.country}}>
                 <option value="india">India</option>
                 <option value="australia">Australia</option>
                 <option value="canada">Canada</option>
@@ -61,7 +61,7 @@
                 <label for="Graduation">Graduation</label>
                 </div>
                 <div class="col-75">
-                <select id="Graduation" name="Graduation">
+                <select id="Graduation" name="Graduation" value = {{data.Graduation}}>
                     <option value="BTech">BTech</option>
                     <option value="Bsc">Bsc</option>
                     <option value="Bcom">Bcom</option>
@@ -73,7 +73,7 @@
                 <label for="cname">College Name</label>
                 </div>
                 <div class="col-75">
-                <input type="text" id="cname" name="collegename" placeholder="Your college name..">
+                <input type="text" id="cname" name="collegename" value = {{data.collegename}} placeholder="Your college name..">
                 </div>
         </div>
         <div class="row">
@@ -81,7 +81,7 @@
                     <label for="passyear">Passing Year</label>
                 </div>
                 <div class="col-75">
-                        <input type="text" id="passyear" name="passyear" placeholder="Your passing year..">
+                        <input type="text" id="passyear" name="passyear" value = {{data.passyear}} placeholder="Your passing year..">
                     
                 </div>
         </div> 
@@ -91,15 +91,15 @@
                    <label for="skills">Skills</label>
                 </div>
                 
-                    <input type="checkbox" id="java" name="java" value="JAVA">
+                    <input type="checkbox" id="java" name="Skills" value="java">
                     <label for="java">Java</label>
-                    <input type="checkbox" id="cpp" name="cpp" value="CPP">
+                    <input type="checkbox" id="cpp" name="Skills" value="CPP">
                     <label for="cpp">Cpp</label>
-                    <input type="checkbox" id="sql" name="sql" value="SQL">
+                    <input type="checkbox" id="sql" name="Skills" value="SQL">
                     <label for="sql">SQL</label>
-                    <input type="checkbox" id="csharp" name="csharp" value="CSHARP">
+                    <input type="checkbox" id="csharp" name="Skills" value="CSHARP">
                     <label for="csharp">Csharp</label>
-                    <input type="checkbox" id="angular" name="angular" value="ANGULAR">
+                    <input type="checkbox" id="angular" name="Skills" value="ANGULAR">
                     <label for="angular">Angular</label><br>
             </div>
     
@@ -108,7 +108,7 @@
             <label for="subject">Address</label>
             </div>
             <div class="col-75">
-            <textarea id="subject" name="subject" placeholder="your address.." style="height:150px"></textarea>
+            <textarea id="subject" name="subject" value={{data.subject}} placeholder="your address.." style="height:150px"></textarea>
             </div>
         </div>
         <div class="row">
